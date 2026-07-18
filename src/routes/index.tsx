@@ -87,8 +87,8 @@ function Home() {
                 <div key={a.slug} className="flex gap-2">
                   <span className="text-2xl font-bold text-primary leading-none">{String(i + 1).padStart(2, "0")}</span>
                   <div className="min-w-0">
-                    <span className="text-[10px] font-bold text-primary uppercase">{categories.find(c => c.slug === a.category)?.name}</span>
-                    <h4 className="text-xs font-semibold leading-snug line-clamp-2">
+                    <span className="text-xs font-bold text-primary uppercase">{categories.find(c => c.slug === a.category)?.name}</span>
+                    <h4 className="text-sm font-semibold leading-snug line-clamp-2">
                       <Link to="/$category/$slug" params={{ category: a.category, slug: a.slug }} className="article-title-link">{a.title}</Link>
                     </h4>
                   </div>
@@ -113,8 +113,8 @@ function Home() {
             <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
               <Link to="/$category/$slug" params={{ category: areas[0].category, slug: areas[0].slug }} className="hover:text-primary">{areas[0].title}</Link>
             </h2>
-            <p className="text-sm opacity-90 mb-4">{areas[0].excerpt}</p>
-            <Link to="/$category/$slug" params={{ category: areas[0].category, slug: areas[0].slug }} className="inline-block bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold rounded">See More Info</Link>
+            <p className="text-base opacity-90 mb-4">{areas[0].excerpt}</p>
+            <Link to="/$category/$slug" params={{ category: areas[0].category, slug: areas[0].slug }} className="inline-block bg-primary text-primary-foreground px-5 py-2 text-base font-semibold rounded">See More Info</Link>
           </div>
         </section>
 
