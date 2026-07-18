@@ -71,20 +71,29 @@
 }
 
 @layer base {
+  html { font-size: 17.5px; }
   * { border-color: var(--color-border); }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    line-height: 1.6;
   }
-  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); letter-spacing: -0.015em; line-height: 1.2; }
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 1rem; }
+  p { line-height: 1.7; }
 }
 
 @utility category-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.68rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -96,7 +105,7 @@
 @utility topbar-strip {
   background: var(--color-primary);
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 @utility article-title-link {
