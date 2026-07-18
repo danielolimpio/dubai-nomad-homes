@@ -33,7 +33,7 @@ jobs:
           port: 21
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          local-dir: ./dist/
+          local-dir: ./dist/client/
           server-dir: /
           dangerous-clean-slate: true
           dry-run: false
