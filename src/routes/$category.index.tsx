@@ -2,7 +2,7 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/blog/SiteHeader";
 import { SiteFooter } from "@/components/blog/SiteFooter";
 import { ArticleCard } from "@/components/blog/ArticleCard";
-import { articlesByCategory, getCategory, categories, articles } from "@/lib/blog-data";
+import { articlesByCategory, getCategory, categories, articles, type Article } from "@/lib/blog-data";
 
 export const Route = createFileRoute("/$category/")({
   loader: ({ params }) => {
@@ -42,7 +42,7 @@ function CategoryPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {items.map(a => <ArticleCard key={a.slug} article={a} variant="small" />)}
+            {items.map((a: Article) => <ArticleCard key={a.slug} article={a} variant="small" />)}
           </div>
           <aside className="space-y-8">
             <div>
