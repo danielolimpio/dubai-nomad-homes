@@ -57,10 +57,10 @@ function ArticlePage() {
             <img src={article.cover} alt={article.title} className="w-full rounded-md mb-8 aspect-[16/9] object-cover" width={1200} height={675} />
             <p className="text-lg leading-relaxed text-foreground/90 mb-8 font-medium">{article.excerpt}</p>
 
-            {article.content.map((s, i) => (
+            {article.content.map((s: { heading: string; body: string[] }, i: number) => (
               <section key={i} className="mb-8">
                 <h2 className="text-2xl font-bold mb-4 border-l-4 border-primary pl-3">{s.heading}</h2>
-                {s.body.map((p, j) => (
+                {s.body.map((p: string, j: number) => (
                   <p key={j} className="text-base leading-relaxed mb-4 text-foreground/85">{p}</p>
                 ))}
               </section>
