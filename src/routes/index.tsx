@@ -9,8 +9,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
       { name: "description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
-      { property: "og:title", content: "UnitedDubai Blog — Dubai Real Estate for Remote Workers" },
-      { property: "og:description", content: "Data-driven Dubai property intelligence for remote workers and international investors." },
+      { property: "og:title", content: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
+      { property: "og:description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
