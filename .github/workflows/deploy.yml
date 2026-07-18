@@ -21,10 +21,14 @@ jobs:
         run: npm install
 
       - name: Build do projeto
-        run: npm run build
+        run: npm run build:static
 
       - name: Mostrar arquivos gerados
-        run: ls -la dist/client/
+        run: |
+          test -f dist/client/index.html
+          test -f dist/client/sitemap.xml
+          test -f dist/client/robots.txt
+          find dist/client -maxdepth 2 -type f | sort | head -100
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
