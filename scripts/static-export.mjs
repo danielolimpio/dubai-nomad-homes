@@ -1,8 +1,15 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { access, cp, mkdir, readdir, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const clientDir = resolve("dist/client");
+const staticSourceCandidates = ["dist/client", ".output/public", "dist/public", "build/client"];
+const serverEntryCandidates = [
+  "dist/server/index.mjs",
+  "dist/server/server.mjs",
+  ".output/server/index.mjs",
+  ".output/server/server.mjs",
+];
 
 const categoryPaths = ["/invest", "/rentals", "/visas", "/areas", "/guides"];
 
@@ -35,22 +42,53 @@ const pagePaths = [
   ...articlePaths,
 ];
 
-const sitemapPaths = [
-  ...pagePaths,
-];
+const sitemapPaths = [...pagePaths];
 
-const serverEntry = await import(pathToFileURL(resolve("dist/server/index.mjs")).href);
+await normalizeClientOutput();
+
+const serverEntryPath = await findExistingPath(serverEntryCandidates);
+if (!serverEntryPath) {
+  throw new Error(
+    [
+      "Static export failed: server entry was not found.",
+      `Checked: ${serverEntryCandidates.join(", ")}`,
+      await describeBuildOutputs(),
+    ].join("\n"),
+  );
+}
+
+const serverEntry = await import(pathToFileURL(serverEntryPath).href);
 const server = serverEntry.default ?? serverEntry;
 
 if (typeof server.fetch !== "function") {
-  throw new Error("Static export failed: dist/server/index.mjs does not export a fetch handler.");
+  throw new Error(`Static export failed: ${serverEntryPath} does not export a fetch handler.`);
 }
 
 await Promise.all(pagePaths.map(exportHtmlPage));
 await writeTextFile("sitemap.xml", buildSitemap());
+await writeTextFile("robots.txt", buildRobotsTxt());
 await writeTextFile(".htaccess", buildHtaccess());
 
 console.log(`Static export completed: ${pagePaths.length} HTML pages + sitemap.xml in dist/client`);
+
+async function normalizeClientOutput() {
+  const staticSource = await findExistingPath(staticSourceCandidates);
+  if (!staticSource) {
+    throw new Error(
+      [
+        "Static export failed: client/static output was not found.",
+        `Checked: ${staticSourceCandidates.join(", ")}`,
+        await describeBuildOutputs(),
+      ].join("\n"),
+    );
+  }
+
+  if (resolve(staticSource) !== clientDir) {
+    await mkdir(clientDir, { recursive: true });
+    await cp(staticSource, clientDir, { recursive: true, force: true });
+    console.log(`Copied static assets from ${staticSource} to dist/client`);
+  }
+}
 
 async function exportHtmlPage(path) {
   const response = await server.fetch(new Request(`http://localhost${path}`), {}, createExecutionContext());
@@ -91,6 +129,16 @@ function buildSitemap() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
+function buildRobotsTxt() {
+  return [
+    "User-agent: *",
+    "Allow: /",
+    "",
+    "Sitemap: https://unitedubai.blog/sitemap.xml",
+    "",
+  ].join("\n");
+}
+
 function buildHtaccess() {
   return [
     "Options -MultiViews",
@@ -106,4 +154,36 @@ function createExecutionContext() {
     passThroughOnException() {},
     props: {},
   };
+}
+
+async function findExistingPath(paths) {
+  for (const path of paths) {
+    const absolutePath = resolve(path);
+    try {
+      await access(absolutePath);
+      return absolutePath;
+    } catch {
+      // Keep looking through every known output shape.
+    }
+  }
+
+  return undefined;
+}
+
+async function describeBuildOutputs() {
+  const roots = ["dist", ".output"];
+  const lines = ["Available build outputs:"];
+
+  for (const root of roots) {
+    try {
+      const entries = await readdir(resolve(root), { recursive: true });
+      lines.push(`${root}:`);
+      lines.push(...entries.slice(0, 80).map((entry) => `  - ${entry}`));
+      if (entries.length > 80) lines.push(`  ... ${entries.length - 80} more`);
+    } catch {
+      lines.push(`${root}: not found`);
+    }
+  }
+
+  return lines.join("\n");
 }
