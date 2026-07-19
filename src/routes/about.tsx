@@ -6,10 +6,12 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | UnitedDubai Blog" },
-      { name: "description", content: "UnitedDubai Blog is an independent editorial publication covering Dubai real estate for remote workers and international investors, backed by data from DLD, RERA and market research." },
+      { name: "description", content: "Independent editorial coverage of Dubai real estate for remote workers and international investors, backed by DLD and RERA data." },
       { property: "og:title", content: "About UnitedDubai Blog" },
       { property: "og:description", content: "Independent editorial coverage of Dubai real estate for remote workers and international investors." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/about" }],
   }),
   component: () => (
     <div className="min-h-screen bg-background">

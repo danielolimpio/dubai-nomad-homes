@@ -77,17 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
-      { name: "description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
+      { title: "UnitedDubai — Dubai Real Estate Guide" },
+      { name: "description", content: "Data-driven Dubai property intelligence for remote workers and global investors: yields, Golden Visa and neighborhood guides." },
       { name: "author", content: "UnitedDubai Blog" },
-      { property: "og:title", content: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
-      { property: "og:description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
+      { property: "og:site_name", content: "UnitedDubai Blog" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
-      { name: "twitter:description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c7786b6-b535-4f72-94e7-707153dac757/id-preview-0690fac6--029add7d-33c8-4e16-995b-280935e8d4cd.lovable.app-1784411828498.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c7786b6-b535-4f72-94e7-707153dac757/id-preview-0690fac6--029add7d-33c8-4e16-995b-280935e8d4cd.lovable.app-1784411828498.png" },
+
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -7,13 +7,15 @@ import { articles, categories, articlesByCategory, trendingArticles } from "@/li
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
-      { name: "description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
-      { property: "og:title", content: "UnitedDubai Blog — Dubai Real Estate for Remote Workers & Global Investors" },
-      { property: "og:description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for remote workers and international buyers." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { title: "UnitedDubai — Dubai Real Estate Guide for Remote Workers" },
+      { name: "description", content: "Data-driven Dubai property intelligence: investment guides, rental yields, and neighborhood breakdowns for remote workers." },
+      { property: "og:title", content: "UnitedDubai — Dubai Real Estate Guide for Remote Workers" },
+      { property: "og:description", content: "Investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for global buyers." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c7786b6-b535-4f72-94e7-707153dac757/id-preview-0690fac6--029add7d-33c8-4e16-995b-280935e8d4cd.lovable.app-1784411828498.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3c7786b6-b535-4f72-94e7-707153dac757/id-preview-0690fac6--029add7d-33c8-4e16-995b-280935e8d4cd.lovable.app-1784411828498.png" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/" }],
   }),
   component: Home,
 });
