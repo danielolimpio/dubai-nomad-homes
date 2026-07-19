@@ -10,9 +10,10 @@ export const Route = createFileRoute("/$category/")({
     if (!cat) throw notFound();
     return { cat, items: articlesByCategory(params.category) };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Category — UnitedDubai Blog" }, { name: "robots", content: "noindex" }] };
     const { cat } = loaderData;
+    const url = `https://dubai-nomad-homes.lovable.app/${params.category}`;
     return {
       meta: [
         { title: `${cat.name} — Dubai Real Estate | UnitedDubai Blog` },
@@ -20,7 +21,9 @@ export const Route = createFileRoute("/$category/")({
         { property: "og:title", content: `${cat.name} — UnitedDubai Blog` },
         { property: "og:description", content: cat.description },
         { property: "og:type", content: "website" },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: CategoryPage,
