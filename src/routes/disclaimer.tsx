@@ -9,7 +9,9 @@ export const Route = createFileRoute("/disclaimer")({
       { name: "description", content: "UnitedDubai Blog publishes informational content only. Nothing on this site constitutes financial, legal or tax advice." },
       { property: "og:title", content: "Disclaimer — UnitedDubai Blog" },
       { property: "og:description", content: "UnitedDubai Blog publishes informational content only. Not financial, legal or tax advice." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/disclaimer" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/disclaimer" }],
   }),
   component: () => (
     <div className="min-h-screen bg-background">

@@ -9,7 +9,9 @@ export const Route = createFileRoute("/privacy")({
       { name: "description", content: "How UnitedDubai Blog collects and processes personal data, cookies and analytics information." },
       { property: "og:title", content: "Privacy Policy — UnitedDubai Blog" },
       { property: "og:description", content: "How UnitedDubai Blog handles personal data, cookies and analytics." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/privacy" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/privacy" }],
   }),
   component: () => (
     <div className="min-h-screen bg-background">

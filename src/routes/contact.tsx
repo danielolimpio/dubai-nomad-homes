@@ -9,7 +9,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Reach the UnitedDubai Blog editorial team for tips, corrections, partnerships or press inquiries." },
       { property: "og:title", content: "Contact — UnitedDubai Blog" },
       { property: "og:description", content: "Contact our editorial team for tips, corrections, partnerships or press inquiries." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/contact" }],
   }),
   component: () => (
     <div className="min-h-screen bg-background">

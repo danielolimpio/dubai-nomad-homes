@@ -9,7 +9,9 @@ export const Route = createFileRoute("/editorial-policy")({
       { name: "description", content: "Our editorial standards: sourcing, fact-checking, corrections, disclosure and separation between editorial and commercial content." },
       { property: "og:title", content: "Editorial Policy — UnitedDubai Blog" },
       { property: "og:description", content: "How UnitedDubai Blog researches, fact-checks and publishes content." },
+      { property: "og:url", content: "https://dubai-nomad-homes.lovable.app/editorial-policy" },
     ],
+    links: [{ rel: "canonical", href: "https://dubai-nomad-homes.lovable.app/editorial-policy" }],
   }),
   component: () => (
     <div className="min-h-screen bg-background">
