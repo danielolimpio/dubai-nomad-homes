@@ -6,9 +6,13 @@ const clientDir = resolve("dist/client");
 const staticSourceCandidates = ["dist/client", ".output/public", "dist/public", "build/client"];
 const serverEntryCandidates = [
   "dist/server/index.mjs",
+  "dist/server/index.js",
   "dist/server/server.mjs",
+  "dist/server/server.js",
   ".output/server/index.mjs",
+  ".output/server/index.js",
   ".output/server/server.mjs",
+  ".output/server/server.js",
 ];
 
 const categoryPaths = ["/invest", "/rentals", "/visas", "/areas", "/guides"];
