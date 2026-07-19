@@ -11,9 +11,10 @@ export const Route = createFileRoute("/$category/$slug")({
     if (!article || !cat) throw notFound();
     return { article, cat };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Article — UnitedDubai Blog" }, { name: "robots", content: "noindex" }] };
     const { article } = loaderData;
+    const url = `https://dubai-nomad-homes.lovable.app/${params.category}/${params.slug}`;
     return {
       meta: [
         { title: `${article.title} | UnitedDubai Blog` },
@@ -21,9 +22,13 @@ export const Route = createFileRoute("/$category/$slug")({
         { property: "og:title", content: article.title },
         { property: "og:description", content: article.excerpt },
         { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
+        { property: "og:image", content: article.cover },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: article.cover },
         { name: "keywords", content: article.keyword },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: ArticlePage,
