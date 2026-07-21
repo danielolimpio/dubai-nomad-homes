@@ -1,0 +1,50 @@
+# UnitedDubai Blog
+
+> Dubai real estate intelligence for digital nomads, remote workers and international investors — investment guides, rental yields, visa routes and neighborhood breakdowns.
+
+## Pages
+
+- [Home](/): Latest articles and curated editorial feed covering Dubai property, rentals, visas and areas.
+- [About](/about): What UnitedDubai covers and how the editorial team researches property data.
+- [Contact](/contact): Send questions, partnership requests or corrections to the editorial desk.
+- [Privacy Policy](/privacy): How visitor data is collected, used and protected.
+- [Disclaimer](/disclaimer): Editorial and financial disclosure for all published content.
+- [Editorial Policy](/editorial-policy): Sourcing standards, fact-checking and update cadence.
+
+## Categories
+
+- [Invest](/invest): Data-driven Dubai property investment insights for remote workers and global buyers.
+- [Rentals](/rentals): Long-stay, monthly and short-term rental market analysis across Dubai.
+- [Visas](/visas): Residency pathways in the UAE tied to property ownership and remote work.
+- [Areas](/areas): Neighborhood-by-neighborhood breakdowns of Dubai's most investable communities.
+- [Guides](/guides): Step-by-step reference guides for foreign investors entering the Dubai market.
+
+## Invest
+
+- [Dubai Property Investment for Remote Workers: Complete 2026 Guide](/invest/dubai-property-investment-remote-workers-guide-2026): How Dubai's tax-free environment, remote-work visas and furnished-apartment supply combined to make the emirate a leading base for location-independent professionals in 2026.
+- [Off-Plan vs Ready Property in Dubai: ROI Data Comparison (2026)](/invest/off-plan-vs-ready-property-dubai-roi-2026): A five-year comparison of realised returns on off-plan launches versus secondary-market ready units in Dubai, using DLD and Property Monitor data.
+- [Best Dubai Areas for Digital Nomad Property Investment 2026](/invest/best-dubai-areas-digital-nomad-investment-2026): Fibre coverage, coworking density and short-lease supply mapped across Marina, JVC, Business Bay, Dubai Hills and JLT for the remote-worker segment.
+
+## Rentals
+
+- [Dubai Airbnb Investment ROI: Real Data from 50 Properties (2026)](/rentals/dubai-airbnb-investment-roi-data-2026): Anonymised occupancy, ADR and net-yield figures compiled from a 50-unit sample of Dubai holiday homes operating on Airbnb and Booking.com through 2025.
+- [Monthly vs Yearly Rentals in Dubai: Best Strategy for Remote Workers](/rentals/monthly-vs-yearly-rentals-dubai-remote-workers): How the Ejari yearly-lease system compares with furnished monthly platforms for professionals who plan 3–12 month stays in Dubai.
+- [Furnished Apartments Dubai: Top 10 Buildings for Digital Nomads 2026](/rentals/furnished-apartments-dubai-digital-nomads-2026): Ten residential towers most frequently listed on furnished-monthly platforms, mapped against building age, connectivity and amenity mix.
+
+## Visas
+
+- [Dubai Golden Visa via Property: Complete Requirements Guide 2026](/visas/dubai-golden-visa-property-requirements-2026): The current AED 2 million threshold, eligible property types and application steps for the property-linked Golden Visa, based on published ICP rules.
+- [Dubai Digital Nomad Visa + Property: Step-by-Step Application 2026](/visas/dubai-digital-nomad-visa-property-application-2026): How the UAE Virtual Working Programme intersects with property ownership, including documents, minimum income thresholds and renewal procedure.
+- [Property Investor Visa Dubai: Minimum Investment & Process 2026](/visas/dubai-property-investor-visa-minimum-investment-2026): The two-year investor residency route, its AED 750,000 threshold, mortgage-linked eligibility and how it differs from the Golden Visa.
+
+## Areas
+
+- [Dubai Marina vs Downtown: Best Area for Remote Workers 2026](/areas/dubai-marina-vs-downtown-remote-workers-2026): A side-by-side profile of the two flagship communities, comparing rents, connectivity, coworking density and lifestyle amenities for remote professionals.
+- [JVC Dubai Investment Guide: ROI, Prices & Growth Potential 2026](/areas/jvc-dubai-property-investment-guide-2026): Jumeirah Village Circle has become one of Dubai's highest-yield mid-market communities. Here is what the current supply pipeline and rental data show.
+- [Dubai Hills Estate: Complete Neighborhood Guide for Investors 2026](/areas/dubai-hills-estate-neighborhood-guide-2026): Master-plan overview, key sub-communities, school proximity and price movement across Dubai Hills Estate through 2025.
+
+## Guides
+
+- [How to Buy Property in Dubai as a Foreigner: 2026 Legal Guide](/guides/buy-property-dubai-foreigner-legal-guide-2026): The freehold framework, NOC process, Oqood registration and title-deed issuance explained for non-UAE nationals purchasing in 2026.
+- [Dubai Property Taxes & Fees 2026: Complete Cost Breakdown](/guides/dubai-property-taxes-fees-2026): There is no annual property tax in Dubai, but transaction, service and municipality fees apply. Here is the full itemised cost stack.
+- [Brazilian Investor's Guide to Dubai Real Estate: Taxes, Visas & ROI](/guides/brazilian-investor-dubai-real-estate-guide): How Brazilian residents can legally remit funds, hold property and report Dubai real-estate assets to the Receita Federal under current Brazilian rules.
