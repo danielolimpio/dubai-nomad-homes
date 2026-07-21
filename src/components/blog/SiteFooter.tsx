@@ -47,7 +47,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-[1240px] px-4 py-5 text-xs opacity-70 flex flex-wrap justify-between gap-2">
+        <div className="mx-auto max-w-[1240px] px-4 py-5 text-xs text-white/90 flex flex-wrap justify-between gap-2">
           <span>© {new Date().getFullYear()} UnitedDubai Blog. All rights reserved.</span>
           <span>Editorial content. Not financial or legal advice.</span>
         </div>
