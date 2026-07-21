@@ -38,6 +38,16 @@ function Home() {
       <SiteHeader />
       <main className="mx-auto max-w-[1240px] px-4 py-6 space-y-10">
 
+        {/* PAGE H1 */}
+        <section className="border-b border-border pb-4">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-tight">
+            UnitedDubai Blog — Real Estate Intelligence for Remote Workers
+          </h1>
+          <p className="text-muted-foreground mt-1 text-base">
+            Investment guides, rental yields, Golden Visa rules and neighborhood breakdowns for global buyers.
+          </p>
+        </section>
+
         {/* HERO: featured + 3 medium */}
         <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4">
           <ArticleCard article={featured} variant="featured" />

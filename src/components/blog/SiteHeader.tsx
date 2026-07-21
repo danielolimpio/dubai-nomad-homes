@@ -18,10 +18,18 @@ export function SiteHeader() {
             <Link to="/contact" className="hidden md:inline hover:underline">Contact Us</Link>
           </div>
           <div className="flex items-center gap-3">
-            <Facebook className="h-3.5 w-3.5" />
-            <Twitter className="h-3.5 w-3.5" />
-            <Linkedin className="h-3.5 w-3.5" />
-            <Youtube className="h-3.5 w-3.5" />
+            <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Facebook className="h-3.5 w-3.5" />
+            </a>
+            <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Twitter className="h-3.5 w-3.5" />
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Linkedin className="h-3.5 w-3.5" />
+            </a>
+            <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Youtube className="h-3.5 w-3.5" />
+            </a>
           </div>
         </div>
       </div>
@@ -42,7 +50,7 @@ export function SiteHeader() {
             <Link to="/about" activeProps={{ className: "text-primary" }} className="hover:text-primary">About</Link>
           </nav>
           <div className="ml-auto flex items-center gap-4 text-sm">
-            <div className="hidden md:flex items-center gap-2 border-l border-border pl-4 text-muted-foreground">
+            <div role="button" aria-label="Search articles" tabIndex={0} className="hidden md:flex items-center gap-2 border-l border-border pl-4 text-muted-foreground cursor-pointer hover:text-primary transition-colors">
               <Search className="h-4 w-4" />
               <span>Search Keywords...</span>
             </div>
