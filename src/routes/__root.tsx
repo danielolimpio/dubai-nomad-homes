@@ -77,12 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "UnitedDubai — Dubai Real Estate Guide" },
-      { name: "description", content: "Data-driven Dubai property intelligence for remote workers and global investors: yields, Golden Visa and neighborhood guides." },
+      { title: "UnitedDubai Blog" },
       { name: "author", content: "UnitedDubai Blog" },
       { property: "og:site_name", content: "UnitedDubai Blog" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+
 
     ],
     links: [
