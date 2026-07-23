@@ -31,6 +31,7 @@ export function SiteFooter() {
           <h4 className="text-lg font-bold mb-5">Information</h4>
           <ul className="space-y-2 text-sm opacity-90">
             <li><Link to="/about" className="hover:text-primary">About Us</Link></li>
+            <li><Link to="/glossary" className="hover:text-primary">Glossary</Link></li>
             <li><Link to="/editorial-policy" className="hover:text-primary">Editorial Policy</Link></li>
             <li><Link to="/disclaimer" className="hover:text-primary">Disclaimer</Link></li>
             <li><Link to="/privacy" className="hover:text-primary">Privacy Policy</Link></li>

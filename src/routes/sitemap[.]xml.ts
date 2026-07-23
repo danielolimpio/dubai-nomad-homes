@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { articles, categories } from "@/lib/blog-data";
+import { glossaryTerms } from "@/lib/glossary-data";
 
 const BASE_URL = "https://unitedubai.blog";
 
@@ -8,10 +9,11 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const staticPaths = ["/", "/about", "/editorial-policy", "/disclaimer", "/privacy", "/contact"];
+        const staticPaths = ["/", "/about", "/editorial-policy", "/disclaimer", "/privacy", "/contact", "/glossary"];
         const catPaths = categories.map(c => `/${c.slug}`);
         const articlePaths = articles.map(a => `/${a.category}/${a.slug}`);
-        const all = [...staticPaths, ...catPaths, ...articlePaths];
+        const glossaryPaths = glossaryTerms.map(t => `/glossary/what-is-${t.slug}`);
+        const all = [...staticPaths, ...catPaths, ...articlePaths, ...glossaryPaths];
 
         const urls = all.map(p =>
           `  <url>\n    <loc>${BASE_URL}${p}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${p === "/" ? "1.0" : "0.7"}</priority>\n  </url>`
