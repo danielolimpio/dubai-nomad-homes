@@ -327,6 +327,43 @@ export const articles: Article[] = [
   },
 ];
 
+articles.push({
+  slug: "golden-visa-vs-remote-work-visa-dubai",
+  category: "visas",
+  title: "Golden Visa vs Remote Work Visa Dubai: Digital Nomad Comparison 2026",
+  excerpt: "A side-by-side comparison of the UAE Golden Visa and the Virtual Working Programme for digital nomads: requirements, costs, duration and practical benefits.",
+  cover: visa,
+  author: "Editorial Desk",
+  date: "March 18, 2026",
+  readTime: "10 min read",
+  keyword: "digital nomad visas Dubai comparison",
+  content: [
+    { heading: "Why compare these two visas", body: [
+      "The UAE offers two very different residency pathways that digital nomads frequently evaluate: the property-linked Golden Visa (10 years) and the Virtual Working Programme, commonly called the Remote Work Visa (1 year). They target different profiles and carry very different cost structures.",
+      "This guide compares both routes on requirements, cost, duration and day-to-day benefits, using published rules from the ICP, GDRFA and the Federal Authority for Identity and Citizenship."
+    ]},
+    { heading: "Eligibility requirements", body: [
+      "Golden Visa (property route): a Dubai property with a title-deed value of at least AED 2,000,000, valid passport, medical fitness certificate and Emirates ID application. Mortgaged units qualify if the borrower has cleared AED 2,000,000 or 50% of the value, whichever is higher.",
+      "Remote Work Visa: proof of current employment abroad (or company ownership) with a minimum monthly income of USD 3,500, contract valid for at least one year, health insurance with UAE coverage and passport valid for at least six months."
+    ]},
+    { heading: "Costs", body: [
+      "Golden Visa: government fees total roughly AED 2,800–4,000 depending on issuance channel, plus the underlying AED 2M property investment and standard DLD transaction costs (~4% transfer fee).",
+      "Remote Work Visa: application fee of USD 287 plus medical insurance and processing. No property or capital commitment is required, which makes it the lower-barrier option for most digital nomads."
+    ]},
+    { heading: "Duration and renewal", body: [
+      "The Golden Visa is issued for 10 years and is renewable as long as the qualifying property is retained. The Remote Work Visa is issued for 1 year and is renewable on the same terms if income and employment conditions remain valid."
+    ]},
+    { heading: "Benefits for digital nomads", body: [
+      "Both visas grant Emirates ID, the right to open UAE bank accounts, register for DEWA/du/Etisalat and lease residential property under Ejari. Both also allow access to the UAE's 0% personal income tax regime for residents.",
+      "The Golden Visa additionally allows sponsoring family members without an employer, no minimum stay requirement to keep residency active, and long-term planning stability. The Remote Work Visa is faster to obtain, does not tie the holder to a property purchase, and is designed for a defined 12-month stay."
+    ]},
+    { heading: "Which route fits which profile", body: [
+      "Digital nomads testing Dubai as a base, or staying under two years, typically choose the Remote Work Visa. Remote professionals planning multi-year residency, family relocation or a property investment they would make regardless of visa status typically choose the Golden Visa.",
+      "This guide is informational and does not constitute legal or immigration advice. Confirm current thresholds directly with ICP or GDRFA before applying."
+    ]},
+  ],
+});
+
 export const getCategory = (slug: string) => categories.find(c => c.slug === slug);
 export const getArticle = (category: string, slug: string) =>
   articles.find(a => a.category === category && a.slug === slug);
