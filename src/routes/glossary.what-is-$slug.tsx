@@ -6,6 +6,7 @@ import {
   getRelatedTerms,
   glossaryCategories,
   glossaryTerms,
+  type GlossaryTerm,
 } from "@/lib/glossary-data";
 import { articles } from "@/lib/blog-data";
 
@@ -127,7 +128,7 @@ export const Route = createFileRoute("/glossary/what-is-$slug")({
 });
 
 function TermPage() {
-  const { term } = Route.useLoaderData();
+  const { term } = Route.useLoaderData() as { term: GlossaryTerm };
   const related = getRelatedTerms(term);
   const catName = glossaryCategories.find((c) => c.slug === term.category)?.name;
   const relatedArticles =
