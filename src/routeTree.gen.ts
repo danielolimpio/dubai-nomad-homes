@@ -16,7 +16,9 @@ import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GlossaryIndexRouteImport } from './routes/glossary.index'
 import { Route as CategoryIndexRouteImport } from './routes/$category.index'
+import { Route as GlossaryWhatIsSlugRouteImport } from './routes/glossary.what-is-$slug'
 import { Route as CategorySlugRouteImport } from './routes/$category.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -54,9 +56,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlossaryIndexRoute = GlossaryIndexRouteImport.update({
+  id: '/glossary/',
+  path: '/glossary/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategoryIndexRoute = CategoryIndexRouteImport.update({
   id: '/$category/',
   path: '/$category/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlossaryWhatIsSlugRoute = GlossaryWhatIsSlugRouteImport.update({
+  id: '/glossary/what-is-$slug',
+  path: '/glossary/what-is-$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategorySlugRoute = CategorySlugRouteImport.update({
@@ -74,7 +86,9 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$category/$slug': typeof CategorySlugRoute
+  '/glossary/what-is-$slug': typeof GlossaryWhatIsSlugRoute
   '/$category/': typeof CategoryIndexRoute
+  '/glossary/': typeof GlossaryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -85,7 +99,9 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$category/$slug': typeof CategorySlugRoute
+  '/glossary/what-is-$slug': typeof GlossaryWhatIsSlugRoute
   '/$category': typeof CategoryIndexRoute
+  '/glossary': typeof GlossaryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -97,7 +113,9 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/$category/$slug': typeof CategorySlugRoute
+  '/glossary/what-is-$slug': typeof GlossaryWhatIsSlugRoute
   '/$category/': typeof CategoryIndexRoute
+  '/glossary/': typeof GlossaryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -110,7 +128,9 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/sitemap.xml'
     | '/$category/$slug'
+    | '/glossary/what-is-$slug'
     | '/$category/'
+    | '/glossary/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -121,7 +141,9 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/sitemap.xml'
     | '/$category/$slug'
+    | '/glossary/what-is-$slug'
     | '/$category'
+    | '/glossary'
   id:
     | '__root__'
     | '/'
@@ -132,7 +154,9 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/sitemap.xml'
     | '/$category/$slug'
+    | '/glossary/what-is-$slug'
     | '/$category/'
+    | '/glossary/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -144,7 +168,9 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
+  GlossaryWhatIsSlugRoute: typeof GlossaryWhatIsSlugRoute
   CategoryIndexRoute: typeof CategoryIndexRoute
+  GlossaryIndexRoute: typeof GlossaryIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -198,11 +224,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/glossary/': {
+      id: '/glossary/'
+      path: '/glossary'
+      fullPath: '/glossary/'
+      preLoaderRoute: typeof GlossaryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$category/': {
       id: '/$category/'
       path: '/$category'
       fullPath: '/$category/'
       preLoaderRoute: typeof CategoryIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glossary/what-is-$slug': {
+      id: '/glossary/what-is-$slug'
+      path: '/glossary/what-is-$slug'
+      fullPath: '/glossary/what-is-$slug'
+      preLoaderRoute: typeof GlossaryWhatIsSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/$category/$slug': {
@@ -224,7 +264,9 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
+  GlossaryWhatIsSlugRoute: GlossaryWhatIsSlugRoute,
   CategoryIndexRoute: CategoryIndexRoute,
+  GlossaryIndexRoute: GlossaryIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
