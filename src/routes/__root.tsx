@@ -92,6 +92,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Google+Sans+Display:wght@400;500;700&family=Google+Sans+Text:wght@400;500;700&display=swap" },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "UnitedDubai Blog",
+          url: "https://dubai-nomad-homes.lovable.app/",
+          logo: "https://dubai-nomad-homes.lovable.app/favicon.ico",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "UnitedDubai Blog",
+          url: "https://dubai-nomad-homes.lovable.app/",
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,

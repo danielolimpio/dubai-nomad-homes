@@ -29,6 +29,26 @@ export const Route = createFileRoute("/$category/$slug")({
         { name: "keywords", content: article.keyword },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: article.title,
+            description: article.excerpt,
+            image: article.cover,
+            author: { "@type": "Person", name: article.author },
+            datePublished: article.date,
+            mainEntityOfPage: url,
+            publisher: {
+              "@type": "Organization",
+              name: "UnitedDubai Blog",
+              logo: { "@type": "ImageObject", url: "https://dubai-nomad-homes.lovable.app/favicon.ico" },
+            },
+          }),
+        },
+      ],
     };
   },
   component: ArticlePage,
