@@ -223,7 +223,7 @@ function GlossaryHub() {
                 {filtered.map((t) => (
                   <li key={t.slug}>
                     <Link
-                      to="/glossary/what-is-$slug"
+                      to="/glossary/what-is-{$slug}"
                       params={{ slug: t.slug }}
                       className="block h-full rounded-xl border border-border bg-card p-5 transition hover:border-primary hover:shadow-md"
                     >
@@ -258,7 +258,7 @@ function GlossaryHub() {
                 {popular.map((t) => (
                   <li key={t.slug}>
                     <Link
-                      to="/glossary/what-is-$slug"
+                      to="/glossary/what-is-{$slug}"
                       params={{ slug: t.slug }}
                       className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
                     >
@@ -276,7 +276,7 @@ function GlossaryHub() {
                 {recent.map((t) => (
                   <li key={t.slug}>
                     <Link
-                      to="/glossary/what-is-$slug"
+                      to="/glossary/what-is-{$slug}"
                       params={{ slug: t.slug }}
                       className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
                     >
