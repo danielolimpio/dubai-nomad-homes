@@ -12,7 +12,7 @@ import { articles } from "@/lib/blog-data";
 
 const BASE = "https://dubai-nomad-homes.lovable.app";
 
-export const Route = createFileRoute("/glossary/what-is-$slug")({
+export const Route = createFileRoute("/glossary/what-is-{$slug}")({
   loader: ({ params }) => {
     const term = getGlossaryTerm(params.slug);
     if (!term) throw notFound();
@@ -355,7 +355,7 @@ function TermPage() {
                   {related.map((r) => (
                     <li key={r.slug}>
                       <Link
-                        to="/glossary/what-is-$slug"
+                        to="/glossary/what-is-{$slug}"
                         params={{ slug: r.slug }}
                         className="block rounded-md px-3 py-2 text-sm hover:bg-muted hover:text-primary transition"
                       >
@@ -377,7 +377,7 @@ function TermPage() {
                   {siblings.map((s) => (
                     <li key={s.slug}>
                       <Link
-                        to="/glossary/what-is-$slug"
+                        to="/glossary/what-is-{$slug}"
                         params={{ slug: s.slug }}
                         className="block rounded-md px-3 py-2 text-sm hover:bg-muted transition"
                       >
