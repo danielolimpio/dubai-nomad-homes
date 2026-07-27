@@ -987,7 +987,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "REITs in Dubai — such as Emirates REIT and ENBD REIT — are Sharia-compliant listed funds that pool investor capital to own income-producing commercial and residential assets. They trade on Nasdaq Dubai and distribute at least 80% of net income as dividends. It is a core concept for anyone investing, renting or securing residency in Dubai real estate, especially remote workers and foreign buyers.",
     keyFacts: ["Regulated by DFSA on Nasdaq Dubai.","Minimum 80% profit distribution.","Sharia-compliant structure."],
     faqs: [{"q":"What is REITs?","a":"REITs in Dubai — such as Emirates REIT and ENBD REIT — are Sharia-compliant listed funds that pool investor capital to own income-producing commercial and residential assets."},{"q":"Is REITs Dubai relevant for digital nomads?","a":"Yes — it is directly connected to Dubai freehold investment, residency and rental pathways commonly used by remote workers and long-term expats."}],
-    relatedSlugs: ["dubai-land-department","roi","capital-appreciation"],
+    relatedSlugs: ["dld","roi","capital-appreciation"],
     updated: "2026-03-15",
     readingMinutes: 3,
   },
