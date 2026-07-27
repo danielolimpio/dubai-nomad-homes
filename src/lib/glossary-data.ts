@@ -906,7 +906,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedArticleSlugs: [{ category: "areas", slug: "dubai-hills-estate-neighborhood-guide-2026" }],
     updated: "2026-03-01",
     readingMinutes: 3,
-  },,
+  },
   {
     slug: "how-to-invest-in-dubai-real-estate",
     term: "How to Invest in Dubai Real Estate",
