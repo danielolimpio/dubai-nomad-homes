@@ -9,7 +9,7 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const staticPaths = ["/", "/about", "/editorial-policy", "/disclaimer", "/privacy", "/contact", "/glossary"];
+        const staticPaths = ["/", "/about", "/editorial-policy", "/disclaimer", "/privacy", "/terms-of-use", "/contact", "/glossary"];
         const catPaths = categories.map(c => `/${c.slug}`);
         const articlePaths = articles.map(a => `/${a.category}/${a.slug}`);
         const glossaryPaths = glossaryTerms.map(t => `/glossary/what-is-${t.slug}`);

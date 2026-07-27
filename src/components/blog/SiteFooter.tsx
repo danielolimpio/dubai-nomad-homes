@@ -34,6 +34,7 @@ export function SiteFooter() {
             <li><Link to="/glossary" className="hover:text-primary">Glossary</Link></li>
             <li><Link to="/editorial-policy" className="hover:text-primary">Editorial Policy</Link></li>
             <li><Link to="/disclaimer" className="hover:text-primary">Disclaimer</Link></li>
+            <li><Link to="/terms-of-use" className="hover:text-primary">Terms of Use</Link></li>
             <li><Link to="/privacy" className="hover:text-primary">Privacy Policy</Link></li>
             <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
           </ul>

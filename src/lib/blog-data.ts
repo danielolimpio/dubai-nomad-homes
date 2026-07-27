@@ -10,6 +10,8 @@ import contract from "@/assets/hero-contract.jpg";
 import jvc from "@/assets/hero-jvc.jpg";
 import taxes from "@/assets/hero-taxes.jpg";
 import brazil from "@/assets/hero-brazil.jpg";
+import investorVisa from "@/assets/hero-investor-visa.jpg";
+import visaCompare from "@/assets/hero-visa-compare.jpg";
 
 export type Category = {
   slug: string;
@@ -206,7 +208,7 @@ export const articles: Article[] = [
     category: "visas",
     title: "Property Investor Visa Dubai: Minimum Investment & Process 2026",
     excerpt: "The two-year investor residency route, its AED 750,000 threshold, mortgage-linked eligibility and how it differs from the Golden Visa.",
-    cover: visa,
+    cover: investorVisa,
     author: "Editorial Desk",
     date: "January 29, 2026",
     readTime: "7 min read",
@@ -332,7 +334,7 @@ articles.push({
   category: "visas",
   title: "Golden Visa vs Remote Work Visa Dubai: Digital Nomad Comparison 2026",
   excerpt: "A side-by-side comparison of the UAE Golden Visa and the Virtual Working Programme for digital nomads: requirements, costs, duration and practical benefits.",
-  cover: visa,
+  cover: visaCompare,
   author: "Editorial Desk",
   date: "March 18, 2026",
   readTime: "10 min read",

@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as EditorialPolicyRouteImport } from './routes/editorial-policy'
@@ -21,6 +22,11 @@ import { Route as CategoryIndexRouteImport } from './routes/$category.index'
 import { Route as GlossaryWhatIsChar123slugChar125RouteImport } from './routes/glossary.what-is-{$slug}'
 import { Route as CategorySlugRouteImport } from './routes/$category.$slug'
 
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/$category/$slug': typeof CategorySlugRoute
   '/glossary/what-is-{$slug}': typeof GlossaryWhatIsChar123slugChar125Route
   '/$category/': typeof CategoryIndexRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/$category/$slug': typeof CategorySlugRoute
   '/glossary/what-is-{$slug}': typeof GlossaryWhatIsChar123slugChar125Route
   '/$category': typeof CategoryIndexRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/editorial-policy': typeof EditorialPolicyRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/$category/$slug': typeof CategorySlugRoute
   '/glossary/what-is-{$slug}': typeof GlossaryWhatIsChar123slugChar125Route
   '/$category/': typeof CategoryIndexRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/privacy'
     | '/sitemap.xml'
+    | '/terms-of-use'
     | '/$category/$slug'
     | '/glossary/what-is-{$slug}'
     | '/$category/'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/privacy'
     | '/sitemap.xml'
+    | '/terms-of-use'
     | '/$category/$slug'
     | '/glossary/what-is-{$slug}'
     | '/$category'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/editorial-policy'
     | '/privacy'
     | '/sitemap.xml'
+    | '/terms-of-use'
     | '/$category/$slug'
     | '/glossary/what-is-{$slug}'
     | '/$category/'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   EditorialPolicyRoute: typeof EditorialPolicyRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
   CategorySlugRoute: typeof CategorySlugRoute
   GlossaryWhatIsChar123slugChar125Route: typeof GlossaryWhatIsChar123slugChar125Route
   CategoryIndexRoute: typeof CategoryIndexRoute
@@ -176,6 +189,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   EditorialPolicyRoute: EditorialPolicyRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
   CategorySlugRoute: CategorySlugRoute,
   GlossaryWhatIsChar123slugChar125Route: GlossaryWhatIsChar123slugChar125Route,
   CategoryIndexRoute: CategoryIndexRoute,
