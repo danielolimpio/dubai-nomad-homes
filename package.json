@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "build:static": "rm -rf dist .output && vite build && node scripts/static-export.mjs",
-    "build:dev": "vite build --mode development",
+    "validate:glossary": "node scripts/validate-glossary-routes.mjs",
+    "build": "node scripts/validate-glossary-routes.mjs && vite build",
+    "build:static": "rm -rf dist .output && node scripts/validate-glossary-routes.mjs && vite build && node scripts/static-export.mjs && VALIDATE_GLOSSARY_OUTPUT=1 node scripts/validate-glossary-routes.mjs",
+    "build:dev": "node scripts/validate-glossary-routes.mjs && vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
