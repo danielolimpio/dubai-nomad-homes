@@ -10,6 +10,8 @@ import contract from "@/assets/hero-contract.jpg";
 import jvc from "@/assets/hero-jvc.jpg";
 import taxes from "@/assets/hero-taxes.jpg";
 import brazil from "@/assets/hero-brazil.jpg";
+import investorVisa from "@/assets/hero-investor-visa.jpg";
+import visaCompare from "@/assets/hero-visa-compare.jpg";
 
 export type Category = {
   slug: string;
